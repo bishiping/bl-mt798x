@@ -9,12 +9,15 @@
 
 ```
 sudo apt install gcc-aarch64-linux-gnu build-essential flex bison libssl-dev device-tree-compiler qemu-user-static
+git clone --depth=1 -b modify https://github.com/bishiping/bl-mt798x.git
+cd bl-mt798x
 ```
 
 ## Build
 ```
 Usage: SOC=[mt7981|mt7986] BOARD=<board name> MULTI_LAYOUT=[0|1] ./build.sh
 eg: SOC=mt7981 BOARD=360t7 ./build.sh
+eg: SOC=mt7981 BOARD=360t7-36M ./build.sh
 eg: SOC=mt7981 BOARD=wr30u MULTI_LAYOUT=1 ./build.sh
 eg: SOC=mt7981 BOARD=cmcc_rax3000m-emmc ./build.sh
 eg: SOC=mt7986 BOARD=redmi_ax6000 MULTI_LAYOUT=1 ./build.sh
